@@ -128,7 +128,9 @@ public:
 
 	WebKit::WebScreenInfo GetScreenInfo(WebWidget* webwidget);
 	bool IsHidden(WebWidget *);
-	void ShowAsPopupWithItems(WebWidget *,const WebKit::WebRect &,int,int,const std::vector<WebMenuItem> &);
+    //void show(WebKit::WebNavigationPolicy policy) {
+//}
+//	void ShowAsPopupWithItems(WebWidget *,const WebKit::WebRect &,int,int,const std::vector<WebMenuItem> &);
 };
 
 #endif

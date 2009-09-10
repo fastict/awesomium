@@ -1646,7 +1646,7 @@ WebKit::WebScreenInfo WebViewProxy::GetScreenInfo(WebWidget * webwidget) {
 	ret.rect = WebKit::WebRect(0,0,1024,768);
 	return ret;
 }
-
+/*
 void WebViewProxy::ShowAsPopupWithItems(WebWidget *webwidget,const WebKit::WebRect &,int,int,const std::vector<WebMenuItem> &) {
 	Show(webwidget, NEW_POPUP); //PRHFIXME: what to do here?
-}
+    }*/

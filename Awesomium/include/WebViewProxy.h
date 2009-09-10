@@ -50,6 +50,7 @@
 #include "base/timer.h"
 #include "base/lock.h"
 #include "WebCursorInfo.h"
+//#include "WebNavigationPolicy.h"
 class NavigationEntry;
 class NavigationController;
 
@@ -350,7 +351,10 @@ public:
 	WebKit::WebScreenInfo GetScreenInfo(WebWidget *);
 
 	// PRHFIXME: unimplemented
-	void ShowAsPopupWithItems(WebWidget *,const WebKit::WebRect &,int,int,const std::vector<WebMenuItem> &);
+//    void show(WebKit::WebNavigationPolicy policy) {
+//    }
+
+//	void ShowAsPopupWithItems(WebWidget *,const WebKit::WebRect &,int,int,const std::vector<WebMenuItem> &);
 
 };
 

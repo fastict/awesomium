@@ -214,9 +214,9 @@ WebKit::WebScreenInfo PopupWidget::GetScreenInfo(WebWidget* webwidget) {
   // when the menu initially is displayed. |items| contains information about
   // each of the entries in the popup menu, such as the type (separator, option,
   // group), the text representation and the item's enabled status.
-void PopupWidget::ShowAsPopupWithItems(WebWidget *webwidget,const WebKit::WebRect &,int,int,const std::vector<WebMenuItem> &) {
-	Show(webwidget, NEW_POPUP); // PRHFIXME: for now.
-}
+//void PopupWidget::ShowAsPopupWithItems(WebWidget *webwidget,const WebKit::WebRect &,int,int,const std::vector<WebMenuItem> &) {
+//	Show(webwidget, NEW_POPUP); // PRHFIXME: for now.
+//}
 
 bool PopupWidget::IsHidden(WebWidget *)
 {
