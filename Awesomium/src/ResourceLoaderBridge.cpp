@@ -158,7 +158,7 @@ namespace {
 		void NotifyReceivedRedirect(const GURL& new_url,
 					const ResourceLoaderBridge::ResponseInfo& info) {
 			if (peer_)
-				peer_->OnReceivedRedirect(new_url, info);
+				peer_->OnReceivedRedirect(new_url);
 		}
 		
 		void NotifyReceivedResponse(const ResourceLoaderBridge::ResponseInfo& info,
@@ -252,6 +252,12 @@ namespace {
 			}
 		}
 		
+		virtual void OnReceivedRedirect(URLRequest* request,
+										const GURL& new_url) {
+			DCHECK(request->status().is_success());
+			OnReceivedRedirect(request,new_url);
+		}
+
 		// --------------------------------------------------------------------------
 		// The following methods are event hooks (corresponding to URLRequest
 		// callbacks) that run on the IO thread.  They are designed to be overridden

@@ -1090,7 +1090,7 @@ void WebViewProxy::RunFileChooser(bool multi_select,
 // @param edit_flags Which edit operations the renderer believes are available
 // @param frame_encoding Which indicates the encoding of current focused
 // sub frame.
-void WebViewProxy::ShowContextMenu(::WebView* webview, ContextNodeType node, int x, int y, const GURL& link_url, const GURL& image_url,
+void WebViewProxy::ShowContextMenu(::WebView* webview, ContextNode node, int x, int y, const GURL& link_url, const GURL& image_url,
 	const GURL& page_url, const GURL& frame_url, const std::wstring& selection_text, const std::wstring& misspelled_word, int edit_flags, 
 	const std::string& security_info, const std::string& frame_encoding)
 {

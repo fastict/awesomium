@@ -175,7 +175,7 @@ WebKit::WebString WebCoreProxy::cookies(const WebKit::WebURL& url, const WebKit:
 void WebCoreProxy::prefetchHostName(const WebKit::WebString&)
 {
 }
-
+/*
 WebKit::WebMessagePortChannel*
 WebCoreProxy::createMessagePortChannel() {
 	NOTREACHED();
@@ -199,7 +199,10 @@ WebCoreProxy::createSessionStorageNamespace() {
 	NOTREACHED();
 	return 0;
 }
-
+*/
+bool WebCoreProxy::getFileSize(const WebKit::WebString& path, long long& result) {
+    return false;
+}
 WebKit::WebClipboard *WebCoreProxy::clipboard() {
 	return webclipboard;
 }

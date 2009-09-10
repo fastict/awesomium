@@ -259,7 +259,7 @@ public:
                               WebFileChooserCallback* file_chooser);
 
 	void ShowContextMenu(
-		::WebView* webview, ContextNodeType node,
+		::WebView* webview, ContextNode node,
 		int x, int y,
 		const GURL& link_url, const GURL& image_url,
 		const GURL& page_url, const GURL& frame_url,

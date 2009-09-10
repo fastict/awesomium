@@ -60,13 +60,14 @@ public:
 	WebKit::WebMimeRegistry* mimeRegistry();
 	
 	WebKit::WebSandboxSupport* sandboxSupport();
-	
+	/*
 	WebKit::WebMessagePortChannel* createMessagePortChannel();
 
 	WebKit::WebStorageNamespace* createLocalStorageNamespace(const WebKit::WebString& path);
 
 	WebKit::WebStorageNamespace* createSessionStorageNamespace();
-
+    */
+    bool getFileSize(const WebKit::WebString& path, long long& result) ;
 	uint64 visitedLinkHash(const char* canonicalURL, size_t length);
 	
 	bool isLinkVisited(uint64 linkHash);
