@@ -63,7 +63,7 @@ public:
 	* The following methods are inherited from WebWidgetDelegate
 	*/
 
-	gfx::NativeViewId GetContainingView(WebWidget* webwidget);
+	//gfx::NativeViewId GetContainingView(WebWidget* webwidget);
 
 	// Called when a region of the WebWidget needs to be re-painted.
 	void DidInvalidateRect(WebWidget* webwidget, const WebKit::WebRect& rect);
@@ -92,8 +92,8 @@ public:
 	// it no longer receives keyboard events.
 	void Blur(WebWidget* webwidget);
 
-	void SetCursor(WebWidget* webwidget, const WebCursor& cursor);
-
+	void SetCursor(WebWidget* webwidget, const WebKit::WebCursorInfo& cursor);
+    void didChangeCursor(const WebKit::WebCursorInfo& cursor);
 	// Returns the rectangle of the WebWidget in screen coordinates.
 	void GetWindowRect(WebWidget* webwidget, WebKit::WebRect* rect);
 

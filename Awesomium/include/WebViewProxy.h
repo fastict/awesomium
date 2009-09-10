@@ -49,7 +49,7 @@
 #include "base/message_loop.h"
 #include "base/timer.h"
 #include "base/lock.h"
-
+#include "WebCursorInfo.h"
 class NavigationEntry;
 class NavigationController;
 
@@ -70,7 +70,7 @@ class WebViewProxy : public WebViewDelegate
 	bool isPopupsDirty;
 	bool needsPainting;
 	ClientObject* clientObject;
-	WebCursor curCursor;
+    WebKit::WebCursorInfo curCursor;
 	std::wstring curTooltip;
 	LockImpl *renderBufferLock, *refCountLock;
 	base::RepeatingTimer<WebViewProxy> renderTimer;
@@ -331,7 +331,7 @@ public:
 
 	void Blur(WebWidget* webwidget);
 
-	void SetCursor(WebWidget* webwidget, const WebCursor& cursor);
+	void SetCursor(WebWidget* webwidget, const WebKit::WebCursorInfo& cursor);
 
 	void GetWindowRect(WebWidget* webwidget, WebKit::WebRect* rect);
 

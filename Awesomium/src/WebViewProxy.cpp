@@ -1351,9 +1351,9 @@ void WebViewProxy::Blur(WebWidget* webwidget)
 	checkKeyboardFocus();
 }
 
-void WebViewProxy::SetCursor(WebWidget* webwidget, const WebCursor& cursor)
+void WebViewProxy::SetCursor(WebWidget* webwidget, const WebKit::WebCursorInfo& cursor)
 {
-	if(!cursor.IsEqual(curCursor))
+	if(!cursor.type==(curCursor.type))
 	{
 		curCursor = cursor;
 #if defined(WIN32)

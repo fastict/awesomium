@@ -91,10 +91,11 @@ void PopupWidget::translatePointRelative(int& x, int& y)
 	}
 }
 
+/*
 gfx::NativeViewId PopupWidget::GetContainingView(WebWidget* webwidget)
 {
 	return NULL;
-}
+    }*/
 
 // Called when a region of the WebWidget needs to be re-painted.
 void PopupWidget::DidInvalidateRect(WebWidget* webwidget, const WebKit::WebRect& rect)
@@ -138,8 +139,8 @@ void PopupWidget::Focus(WebWidget* webwidget) { widget->SetFocus(true); }
 // it no longer receives keyboard events.
 void PopupWidget::Blur(WebWidget* webwidget) { widget->SetFocus(false); }
 
-void PopupWidget::SetCursor(WebWidget* webwidget, const WebCursor& cursor) {}
-
+void PopupWidget::SetCursor(WebWidget* webwidget, const WebKit::WebCursorInfo& cursor) {}
+void PopupWidget::didChangeCursor(const WebKit::WebCursorInfo& cursor){}
 // Returns the rectangle of the WebWidget in screen coordinates.
 void PopupWidget::GetWindowRect(WebWidget* webwidget, WebKit::WebRect* rect)
 {
