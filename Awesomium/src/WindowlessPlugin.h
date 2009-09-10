@@ -35,7 +35,7 @@
 #include "base/message_loop.h"
 #include "base/timer.h"
 #include "WebCore.h"
-
+#include "WebCursorInfo.h"
 class WindowlessPlugin : public WebPluginDelegate
 {
 public:
@@ -416,7 +416,7 @@ public:
 			pluginInstance->SetURLLoadData(GURL(url.c_str()), notify_data);
 	}
 
-	bool HandleInputEvent(const WebKit::WebInputEvent &,WebCursor *) {
+	bool HandleInputEvent(const WebKit::WebInputEvent &,WebKit::WebCursorInfo *) {
 		// PRHFIXME: What to do here? 
 		return false;
 	}
